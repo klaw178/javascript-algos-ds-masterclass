@@ -55,39 +55,41 @@
 
 // findLongestSubstring('thisisawesome')
 
-function stringifyNumbers(obj) {
-    let newObj = {
-        ...obj
-    };
-    // add whatever parameters you deem necessary - good luck!
-    function parse(nestedObj) {
-        for (let key in nestedObj) {
-            let item = nestedObj[key];
-            if (typeof item === 'object') {
-                parse(nestedObj[key]);
-            }
-            if (typeof item === 'number') {
-                let str = item.toString();
-                nestedObj[key] = str;
-            }
-        }
-    }
-    parse(newObj);
-    console.log(newObj);
-    return newObj;
-}
+// function stringifyNumbers(obj) {
+//     let newObj = {
+//         ...obj
+//     };
+//     // add whatever parameters you deem necessary - good luck!
+//     function parse(nestedObj) {
+//         for (let key in nestedObj) {
+//             let item = nestedObj[key];
+//             if (typeof item === 'object') {
+//                 parse(nestedObj[key]);
+//             }
+//             if (typeof item === 'number') {
+//                 let str = item.toString();
+//                 nestedObj[key] = str;
+//             }
+//         }
+//     }
+//     parse(newObj);
+//     console.log(newObj);
+//     return newObj;
+// }
 
-let obj = {
-    num: 1,
-    test: [],
-    data: {
-        val: 4,
-        info: {
-            isRight: true,
-            random: 66
-        }
-    }
-}
+// let obj = {
+//     num: 1,
+//     test: [],
+//     data: {
+//         val: 4,
+//         info: {
+//             isRight: true,
+//             random: 66
+//         }
+//     }
+// }
 
-stringifyNumbers(obj);
-console.log(obj);
+// stringifyNumbers(obj);
+// console.log(obj);
+
+
