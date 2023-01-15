@@ -35,7 +35,7 @@ class DoublyLinkedList {
             this.tail = null;
         } else {
             this.tail = temp.prev;
-            this.tail.next = null;
+            temp.next = null;
             temp.prev = null;
         }
         this.length--;
@@ -112,7 +112,7 @@ class DoublyLinkedList {
     }
 
     remove(idx) {
-        if (idx < 0 || idx >= this.length) return false;
+        if (idx < 0 || idx >= this.length) return undefined;
         if (idx === 0) return this.shift();
         if (idx === this.length - 1) return this.pop();
         let node = this.get(idx);
@@ -127,11 +127,12 @@ class DoublyLinkedList {
 
 let doublyLinkedList = new DoublyLinkedList();
 
-doublyLinkedList.push(0);
-doublyLinkedList.push(1);
-doublyLinkedList.push(2);
-doublyLinkedList.push(3);
-doublyLinkedList.push(4);
+doublyLinkedList.push(0).push(1).push(2).push(3);
+console.log(doublyLinkedList.get(0).val)
+console.log(doublyLinkedList.get(1).val)
+console.log(doublyLinkedList.get(2).val)
+console.log(doublyLinkedList.get(3).val)
+console.log(doublyLinkedList.get(4))
 
 
 
