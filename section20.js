@@ -123,16 +123,29 @@ class DoublyLinkedList {
         this.length--;
         return node;
     }
+
+    reverse(){
+        let currNode = this.head;
+        this.head = this.tail;
+        this.tail = currNode;
+        let nextNode;
+        let prevNode = null;
+        for (let i = 0; i < this.length; i++) {
+            nextNode = currNode.next;
+            currNode.next = prevNode;
+            currNode.prev = nextNode;
+            prevNode = currNode;
+            currNode = nextNode;
+        }
+        return this;
+    }
 }
 
 let doublyLinkedList = new DoublyLinkedList();
 
-doublyLinkedList.push(0).push(1).push(2).push(3);
-console.log(doublyLinkedList.get(0).val)
-console.log(doublyLinkedList.get(1).val)
-console.log(doublyLinkedList.get(2).val)
-console.log(doublyLinkedList.get(3).val)
-console.log(doublyLinkedList.get(4))
+doublyLinkedList.push(0).push(1).push(2).push(3).reverse();
+console.log(doublyLinkedList);
+
 
 
 

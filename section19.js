@@ -145,7 +145,6 @@ singlyLinkedList.push(0);
 singlyLinkedList.push(1);
 singlyLinkedList.push(2);
 singlyLinkedList.push(3);
-singlyLinkedList.insert(2,1.5);
-singlyLinkedList.remove(2);
+singlyLinkedList.reverse();
 singlyLinkedList.print();
 
